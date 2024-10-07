@@ -1,5 +1,5 @@
 ---
-icon: hand-wave
+icon: globe-pointer
 cover: .gitbook/assets/daw_cabecera.png
 coverY: 0
 layout:
@@ -24,8 +24,16 @@ Este temario y ejercicios corresponden al IES Claudio Moyano, Zamora, de la prom
 
 Aquí podéis encontrar todo lo relativo a la tutoría del curso
 
+
+
 \
 **Primer Curso (DAW1):**
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Bases de Datos</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td></td><td>Programación</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td></td><td>Sistemas Informáticos</td><td></td><td></td></tr><tr><td></td><td>Entornos de Desarrollo</td><td></td><td></td></tr><tr><td></td><td>Lenguaje de Marcas</td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">Bases de Datos</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td></td><td align="center">Programación</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td></td><td align="center">Sistemas Informáticos</td><td></td><td></td></tr><tr><td></td><td align="center">Entornos de Desarrollo</td><td></td><td></td></tr><tr><td></td><td align="center">Lenguaje de Marcas</td><td></td><td></td></tr></tbody></table>
+
+***
+
+{% hint style="danger" %}
+No me hago responsable por el contenido de los exámenes en este sitio web. Los exámenes fueron encontrados en Google y no puedo garantizar su exactitud o autenticidad. Si encuentras algún error o problema, te recomiendo verificar la información por tu cuenta
+{% endhint %}
 

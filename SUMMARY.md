@@ -13,4 +13,7 @@
 
 ## Bases de Datos
 
-* [Page 1](bases-de-datos/page-1.md)
+* [Apuntes](bases-de-datos/apuntes.md)
+* [Ejercicios](bases-de-datos/ejercicios/README.md)
+  * [Unidad 1](bases-de-datos/ejercicios/unidad-1.md)
+  * [Unidad 2](bases-de-datos/ejercicios/unidad-2.md)

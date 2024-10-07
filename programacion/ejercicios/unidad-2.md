@@ -14,13 +14,15 @@ layout:
 
 # Unidad 2
 
+***
+
 {% hint style="danger" %}
 Si alguna de las soluciones de los ejercicios es incorrecta, no dudes en contactarme.
 {% endhint %}
 
 ### Actividad 1 P26
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -45,7 +47,7 @@ int main() {
 
 ### Actividad 3 P27
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% code fullWidth="false" %}
 ```c
@@ -72,7 +74,7 @@ int main() {
 
 ### Actividad 5 P34
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>

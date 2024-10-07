@@ -14,6 +14,8 @@ layout:
 
 # Unidad 3
 
+***
+
 {% hint style="danger" %}
 Si alguna de las soluciones de los ejercicios es incorrecta, no dudes en contactarme.
 {% endhint %}
