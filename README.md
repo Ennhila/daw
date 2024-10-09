@@ -33,7 +33,3 @@ Aquí podéis encontrar todo lo relativo a la tutoría del curso
 
 ***
 
-{% hint style="danger" %}
-No me hago responsable por el contenido de los exámenes en este sitio web. Los exámenes fueron encontrados en Google y no puedo garantizar su exactitud o autenticidad. Si encuentras algún error o problema, te recomiendo verificar la información por tu cuenta
-{% endhint %}
-
