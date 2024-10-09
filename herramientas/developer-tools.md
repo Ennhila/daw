@@ -1,6 +1,6 @@
 ---
-description: hmm
 icon: brackets-curly
+description: HTML, C, SQL, JAVA,...
 layout:
   title:
     visible: true
@@ -26,6 +26,7 @@ layout:
 
 * :star: [**HTML Reference**](https://htmlreference.io/), [HTML Cheat Sheet](https://htmlcheatsheet.com/) or [HTML.com](https://html.com/) - Guías HTML / Hojas de referencia
 * [HTMLColorCodes](https://htmlcolorcodes.com/) - Códigos de color HTML
+* [Notepad++](https://notepad-plus-plus.org/) - Code Editor
 
 ### CSS
 
@@ -44,9 +45,10 @@ layout:
 
 * :star: [**generatedata.com**](https://generatedata.com/) - Generar datos de prueba en diferentes idiomas
 
-### Lenguajes C
+### C
 
 * [Learn C](https://www.learn-c.org/) - C Tutorial
+* [Dev-C++](https://www.bloodshed.net/) - C/C++ Editor
 
 ### JAVA
 

@@ -425,17 +425,14 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int contador = 1;
+    int i;
 
-    // Imprimir los números del 1 al 100 en una tabla de 10x10
-    for (int fila = 0; fila < 10; fila++) {
-        for (int columna = 0; columna < 10; columna++) {
-            printf("%4d", contador);
-            contador++;
-        }
-        printf("\n");
-    }
-
+	for(i =1; i<=100;i++){
+		printf("%d ", i);
+		if(i%10==0){
+			printf("\n");
+		}
+	}
     return 0;
 }
 ```
@@ -459,5 +456,81 @@ int main() {
     return 0;
 }
 
+```
+
+### Actividad 12 P28
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main(){
+	int num, a, i;
+	
+	printf("dame num:	");
+	scanf("%d", &num);
+	printf("\n");
+	a=1;
+	while(a<=num){
+		i=0;
+		while(i<=10){
+			printf("%d*%d=%d\n", a, i, a*i);
+			i++;
+		}
+		a=a+1;
+	}
+}
+```
+
+### Actividad 13 P28
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    float suma = 0.0;
+
+
+    do {
+        printf("Introduce un valor para n (1 <= n <= 30000): ");
+        scanf("%d", &n);
+        if (n < 1 || n > 30000) {
+            printf("Valor no valido. Por favor, intentalo de nuevo.\n");
+        }
+    } while (n < 1 || n > 30000);
+
+
+    for (int i = 1; i <= n; i++) {
+        suma += (float)i / (i + 1);
+    }
+
+
+    printf("La suma de la serie es: %.6f\n", suma);
+
+    return 0;
+}
+```
+
+### Actividad 14 P28
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main(){
+	int n, suma;
+	printf("Introduce un num: ");
+	scanf("%d", &n);
+	
+	for(int i = 1; i<=n; i++){
+		suma += pow(i, 2);
+	}
+	printf("la suma de la serie es: %d\n", suma);
+}
 ```
 

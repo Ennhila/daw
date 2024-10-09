@@ -1,11 +1,11 @@
 ---
-description: Chatbots, Generadores de texto, Generadores de imágenes,...
 icon: robot
+description: Chatbots, Generadores de texto, Generadores de imágenes,...
 ---
 
 # Inteligencia Artificial
 
-## &#x20;<a href="#ai-chatbots" id="ai-chatbots"></a>
+***
 
 ## AI Chatbots [​](https://fmhy.net/ai#ai-chatbots) <a href="#ai-chatbots" id="ai-chatbots"></a>
 
@@ -22,7 +22,7 @@ icon: robot
 
 ***
 
-## Generación de video[​](https://fmhy.net/ai#video-generation)
+## Generador de video[​](https://fmhy.net/ai#video-generation)
 
 * :star: [**PixVerse**](https://pixverse.ai/) - Generador de video
 * [Kling AI](https://klingai.com/)- Generador de video
@@ -33,7 +33,7 @@ icon: robot
 
 ***
 
-### Generación de imágenes[​](https://fmhy.net/ai#image-generation) <a href="#image-generation" id="image-generation"></a>
+### Generador de  imágenes[​](https://fmhy.net/ai#image-generation) <a href="#image-generation" id="image-generation"></a>
 
 * &#x20;[**Microsoft Designer**](https://designer.microsoft.com/image-creator), [2](https://www.bing.com/images/create) / Ilimitado&#x20;
 * &#x20;[**Mage**](https://www.mage.space/) / Ilimitado
