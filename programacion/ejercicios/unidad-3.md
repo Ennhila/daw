@@ -534,3 +534,48 @@ int main(){
 }
 ```
 
+### Actividad 15 P29
+
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main (){
+	int num, res=0;
+	while (1){
+		printf("Num: ");
+		scanf("%d", &num);
+		if(num<=0){
+			break;
+		}
+		
+		res = res + num;
+	}
+	printf("\nSuma: %d\n", res);
+}
+```
+
+### Actividad 16 P29
+
+<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
+```
+
+### Actividad 17 P29
+
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
+```
+
+### Actividad 18 P29
+
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
+```
