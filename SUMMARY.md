@@ -31,6 +31,12 @@
 * [Ejercicios](sistemas-informaticos/ejercicios.md)
 * [Exámenes](sistemas-informaticos/examenes.md)
 
+## Entornos de Desarrollo
+
+* [Apuntes](entornos-de-desarrollo/apuntes.md)
+* [Ejercicios](entornos-de-desarrollo/ejercicios/README.md)
+  * [Diagramas de Flujo](entornos-de-desarrollo/ejercicios/diagramas-de-flujo.md)
+
 ## Herramientas
 
 * [Inteligencia Artificial](herramientas/inteligencia-artificial.md)
