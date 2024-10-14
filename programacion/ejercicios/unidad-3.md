@@ -458,7 +458,7 @@ int main() {
 
 ```
 
-### Actividad 12 P28
+### Actividad 12 P29
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -483,7 +483,7 @@ int main(){
 }
 ```
 
-### Actividad 13 P28
+### Actividad 13 P29
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -515,7 +515,7 @@ int main() {
 }
 ```
 
-### Actividad 14 P28
+### Actividad 14 P29
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -534,7 +534,7 @@ int main(){
 }
 ```
 
-### Actividad 15 P29
+### Actividad 15 P30
 
 <figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
@@ -556,25 +556,75 @@ int main (){
 }
 ```
 
-### Actividad 16 P29
+### Actividad 16 P30
 
 <figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 ```c
-// Some code
+#include <stdio.h>
+
+int main(){
+	int i, num, fact=1;
+	printf("Introduce num: ");
+	scanf("%d", &num);
+	
+	for(i=1; i <= num; i++){
+		fact = fact*i;
+		printf("%d! = %d\n", i, fact);
+	}
+	
+}
 ```
 
-### Actividad 17 P29
+### Actividad 17 P30
 
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main(){
+	int i, num;
+	int suma=0;
+	do{
+		printf("Introduce num:");
+		scanf("%d", &num);
+		suma = suma + num;
+		i++;
+	}while(num!=0);
+	float media = (float)suma/(i - 1);
+	printf("Media: %.2f", media);
+	
+}
+```
+
+### Actividad 18 P30
+
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 // Some code
 ```
 
-### Actividad 18 P29
+### Actividad 19 P31
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
+```
+
+### Actividad 20 P31
+
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
+```
+
+### Actividad 21 P31
+
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 // Some code
