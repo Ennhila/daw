@@ -460,7 +460,7 @@ int main() {
 
 ### Actividad 12 P29
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -485,7 +485,7 @@ int main(){
 
 ### Actividad 13 P29
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -517,7 +517,7 @@ int main() {
 
 ### Actividad 14 P29
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
