@@ -33,3 +33,6 @@ Aquí podéis encontrar todo lo relativo a la tutoría del curso
 
 ***
 
+Horario de Clases:
+
+<figure><img src=".gitbook/assets/Captura_de_pantalla_2024-09-22_a_las_11.41.09.webp" alt=""><figcaption><p>HORARIO PROVISIONAL sujeto a modificaciones</p></figcaption></figure>
