@@ -485,7 +485,7 @@ int main(){
 
 ### Actividad 13 P29
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -517,7 +517,7 @@ int main() {
 
 ### Actividad 14 P29
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -603,7 +603,25 @@ int main(){
 <figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 ```c
-// Some code
+#include <stdio.h>
+
+int main() {
+    int n1 = 0, n2 = 1, nextTerm, i;
+
+    printf("Los primeros 30 números de la sucesión de Fibonacci son:\n");
+    printf("%d, %d", n1, n2);
+
+    for (i = 3; i <= 30; i++) {
+        nextTerm = n1 + n2;
+        printf(", %d", nextTerm);
+        n1 = n2;
+        n2 = nextTerm;
+    }
+
+    printf("\n");
+
+    return 0;
+}
 ```
 
 ### Actividad 19 P31
@@ -611,7 +629,28 @@ int main(){
 <figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 ```c
-// Some code
+#include <stdio.h>
+
+int main() {
+    int altura;
+    char caracter;
+
+    
+    printf("Introduce un número entero: ");
+    scanf("%d", &altura);
+    printf("Introduce un carácter: ");
+    scanf(" %c", &caracter); 
+
+    // Imprimir el carácter en forma de triángulo
+    for (int i = 1; i <= altura; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            printf("%c", caracter);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ### Actividad 20 P31
@@ -619,7 +658,37 @@ int main(){
 <figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 ```c
-// Some code
+#include <stdio.h>
+
+int main() {
+    int altura;
+    char caracter;
+
+    
+    printf("Introduce un número entero: ");
+    scanf("%d", &altura);
+    printf("Introduce un carácter: ");
+    scanf(" %c", &caracter); 
+
+    // Parte superior del rombo (ascendente)
+    for (int i = 1; i <= altura; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            printf("%c", caracter);
+        }
+        printf("\n");
+    }
+
+    // Parte inferior del rombo (descendente)
+    for (int i = altura - 1; i >= 1; --i) {
+        for (int j = 1; j <= i; ++j) {
+            printf("%c", caracter);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
 ```
 
 ### Actividad 21 P31
@@ -627,5 +696,113 @@ int main(){
 <figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 ```c
-// Some code
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c;
+    float discriminante, raiz1, raiz2, parteReal, parteImaginaria;
+
+    // Solicitar los coeficientes a, b y c
+    printf("Introduce el valor de a: ");
+    scanf("%f", &a);
+    printf("Introduce el valor de b: ");
+    scanf("%f", &b);
+    printf("Introduce el valor de c: ");
+    scanf("%f", &c);
+
+    // Calcular el discriminante
+    discriminante = b * b - 4 * a * c;
+
+    // Verificar si el discriminante es mayor, igual o menor que 0
+    if (discriminante > 0) {
+        // Dos raíces reales y diferentes
+        raiz1 = (-b + sqrt(discriminante)) / (2 * a);
+        raiz2 = (-b - sqrt(discriminante)) / (2 * a);
+        printf("Las raíces son reales y diferentes: %.2f y %.2f\n", raiz1, raiz2);
+    } 
+    else if (discriminante == 0) {
+        // Una raíz real (raíz doble)
+        raiz1 = -b / (2 * a);
+        printf("La raíz es real y doble: %.2f\n", raiz1);
+    } 
+    else {
+        // Raíces complejas
+        parteReal = -b / (2 * a);
+        parteImaginaria = sqrt(-discriminante) / (2 * a);
+        printf("Las raíces son complejas: %.2f + %.2fi y %.2f - %.2fi\n", parteReal, parteImaginaria, parteReal, parteImaginaria);
+    }
+
+    return 0;
+}
+
 ```
+
+### Actividad 22 P31
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main() {
+    int numero;
+    do {
+        printf("Introduce un número (introduce un número negativo para salir): ");
+        scanf("%d", &numero);
+
+        if (numero >= 0) {
+            printf("Has introducido: %d\n", numero);
+        }
+    } while (numero >= 0);
+
+    printf("Número negativo introducido. Fin del programa.\n");
+
+    return 0;
+}
+
+```
+
+### Actividad 23 P32
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main() {
+    int nota, totalAlumnos = 0, sobresalientes = 0, notables = 0, aprobados = 0, suspensos = 0;
+    float sumaNotas = 0.0;
+
+    printf("Introduzca las notas (número negativo para terminar):\n");
+    while (1) {
+        scanf("%d", &nota);
+        if (nota < 0) break;
+        sumaNotas += nota;
+        totalAlumnos++;
+        if (nota >= 9) sobresalientes++;
+        else if (nota >= 7) notables++;
+        else if (nota >= 5) aprobados++;
+        else suspensos++;
+    }
+
+    if (totalAlumnos > 0) {
+        float notaMedia = sumaNotas / totalAlumnos;
+        printf("Total alumnos: %d\n", totalAlumnos);
+        printf("Total sobresalientes: %d\n", sobresalientes);
+        printf("Total notables: %d\n", notables);
+        printf("Total aprobados: %d\n", aprobados);
+        printf("Total suspensos: %d\n", suspensos);
+        printf("Nota media: %.2f\n", notaMedia);
+        printf("Porcentaje sobresalientes: %.2f%%\n", (sobresalientes * 100.0) / totalAlumnos);
+        printf("Porcentaje notables: %.2f%%\n", (notables * 100.0) / totalAlumnos);
+        printf("Porcentaje aprobados: %.2f%%\n", (aprobados * 100.0) / totalAlumnos);
+        printf("Porcentaje suspensos: %.2f%%\n", (suspensos * 100.0) / totalAlumnos);
+    } else {
+        printf("No se han introducido notas.\n");
+    }
+
+    return 0;
+}
+```
+
