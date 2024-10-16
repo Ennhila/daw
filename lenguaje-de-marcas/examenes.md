@@ -29,3 +29,7 @@ El contenido del examen que se comparte en esta página no es de nuestra escuela
 {% file src="../.gitbook/assets/Examen 1ª ordinaria - 2ª evaluación.pdf" %}
 
 {% file src="../.gitbook/assets/Examen 2ª evaluación (1).pdf" %}
+
+***
+
+{% file src="../.gitbook/assets/648856561-examen-junio-17-lenguaje-de-marcas-daw.pdf" %}
