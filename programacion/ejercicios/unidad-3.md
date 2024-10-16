@@ -774,30 +774,41 @@ int main() {
     int nota, totalAlumnos = 0, sobresalientes = 0, notables = 0, aprobados = 0, suspensos = 0;
     float sumaNotas = 0.0;
 
-    printf("Introduzca las notas (número negativo para terminar):\n");
-    while (1) {
-        scanf("%d", &nota);
-        if (nota < 0) break;
-        sumaNotas += nota;
-        totalAlumnos++;
-        if (nota >= 9) sobresalientes++;
-        else if (nota >= 7) notables++;
-        else if (nota >= 5) aprobados++;
-        else suspensos++;
-    }
-
+    do {
+	    	printf("Introduzca la nota : ");
+	        scanf("%d", &nota);
+	 
+	        if (nota < 0) {
+	            break;
+	        }
+	        sumaNotas += nota;
+			totalAlumnos++;
+	        if (nota >= 9){
+	        	sobresalientes++;
+	    	}
+	    	else if (nota >= 7){
+	    		notables++;
+	    	}
+	    	else if (nota >= 5){
+	    		aprobados++;
+	   		 }
+	    	else {
+	    		suspensos++;
+			}
+	} while (nota > 0) ;
+	
     if (totalAlumnos > 0) {
         float notaMedia = sumaNotas / totalAlumnos;
         printf("Total alumnos: %d\n", totalAlumnos);
-        printf("Total sobresalientes: %d\n", sobresalientes);
-        printf("Total notables: %d\n", notables);
-        printf("Total aprobados: %d\n", aprobados);
-        printf("Total suspensos: %d\n", suspensos);
-        printf("Nota media: %.2f\n", notaMedia);
-        printf("Porcentaje sobresalientes: %.2f%%\n", (sobresalientes * 100.0) / totalAlumnos);
-        printf("Porcentaje notables: %.2f%%\n", (notables * 100.0) / totalAlumnos);
-        printf("Porcentaje aprobados: %.2f%%\n", (aprobados * 100.0) / totalAlumnos);
-        printf("Porcentaje suspensos: %.2f%%\n", (suspensos * 100.0) / totalAlumnos);
+        printf("Total sobresalientes: %d\t %.2f%%\n", sobresalientes, (sobresalientes * 100.0) / totalAlumnos);
+        printf("Total notables: %d\t%.2f%%\n", notables, (notables * 100.0) / totalAlumnos);
+        printf("Total aprobados: %d\t%.2f%%\n", aprobados, (aprobados * 100.0) / totalAlumnos);
+        printf("Total suspensos: %d\t%.2f%%\n", suspensos, (suspensos * 100.0) / totalAlumnos);
+        if(notaMedia >= 5){
+			printf("Nota media: %.2f	(Aprobado)\n", notaMedia);
+		}else{
+			printf("Nota media: %.2f	(Suspenso)", notaMedia);
+		}
     } else {
         printf("No se han introducido notas.\n");
     }
