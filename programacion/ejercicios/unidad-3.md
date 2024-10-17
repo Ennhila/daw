@@ -485,7 +485,7 @@ int main(){
 
 ### Actividad 13 P29
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -517,7 +517,7 @@ int main() {
 
 ### Actividad 14 P29
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -740,7 +740,7 @@ int main() {
 
 ### Actividad 22 P31
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -765,7 +765,7 @@ int main() {
 
 ### Actividad 23 P32
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -815,5 +815,156 @@ int main() {
 
     return 0;
 }
+```
+
+### Actividad 24 P32
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main() {
+    int number, guess, attempts = 0;
+    srand(time(0)); 
+    number = rand() % 100 + 1; //un número aleatorio del 0 al 100
+
+    printf("**************************************************************\n");
+    printf("Bienvenido al juego de adivinar numeros!\n");
+    printf("He seleccionado un numero entre 1 y 100. Puedes adivinarlo?\n");
+    printf("**************************************************************\n");
+
+    do {
+        printf("Ingrese su suposicion: ");
+        scanf("%d", &guess);
+        attempts++;
+
+        if (guess > number) {
+            printf("Demasiado alto! Intentar otra vez.\n");
+        } else if (guess < number) {
+            printf("Demasiado bajo! Intentar otra vez.\n");
+        } else {
+            printf("Felicidades! Adivino el numero en %d intentos.\n", attempts);
+        }
+        printf("\n");
+    } while (guess != number);
+
+    return 0;
+}
+```
+
+### Actividad 25 P33
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main() {
+    int edades[5];
+    float alturas[5];
+    int mayoresEdad = 0;
+    int menoresAltura = 0;
+    int sumaEdades = 0;
+    float sumaAlturas = 0.0;
+
+    // Entrada de datos
+    for (int i = 0; i < 5; i++) {
+        printf("Introduce la edad de la persona %d: ", i + 1);
+        scanf("%d", &edades[i]);
+        printf("Introduce la altura de la persona %d (en metros): ", i + 1);
+        scanf("%f", &alturas[i]);
+
+        // Sumar edades y alturas
+        sumaEdades += edades[i];
+        sumaAlturas += alturas[i];
+
+        // Contar mayores de edad
+        if (edades[i] >= 18) {
+            mayoresEdad++;
+        }
+
+        // Contar personas con altura menor a 1.70
+        if (alturas[i] < 1.70) {
+            menoresAltura++;
+        }
+    }
+
+    // Calcular promedios
+    float edadMedia = sumaEdades / 5.0;
+    float alturaMedia = sumaAlturas / 5.0;
+
+    // Mostrar resultados
+    printf("\nEdad media: %.2f\n", edadMedia);
+    printf("Altura media: %.2f\n", alturaMedia);
+    printf("Numero de personas mayores de edad: %d\n", mayoresEdad);
+    printf("Numero de personas con altura menor de 1.70: %d\n", menoresAltura);
+
+    return 0;
+}
+
+```
+
+### Actividad 26 P33
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
+```
+
+### Actividad 27 P33
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main() {
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            for (int k = 0; k < 10; k++) {
+                for (int l = 0; l < 10; l++) {
+                    if (i == 5) {
+                        printf("C");
+                    } else {
+                        printf("%d", i);
+                    }
+                    printf("-");
+                    if (j == 5) {
+                        printf("C");
+                    } else {
+                        printf("%d", j);
+                    }
+                    printf("-");
+                    if (k == 5) {
+                        printf("C");
+                    } else {
+                        printf("%d", k);
+                    }
+                    printf("-");
+                    if (l == 5) {
+                        printf("C");
+                    } else {
+                        printf("%d", l);
+                    }
+                    printf("\n");
+                }
+            }
+        }
+    }
+    return 0;
+}
+```
+
+### Actividad 28 P33
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+```c
+// Some code
 ```
 
