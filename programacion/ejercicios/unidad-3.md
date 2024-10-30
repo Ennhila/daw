@@ -32,7 +32,6 @@ int main() {
     int opcion;
     float base, altura, radio, area;
 
-    do {
         // Mostrar el menú de opciones
         printf("\nSeleccione una opción:\n");
         printf("a) Área de un rectángulo\n");
@@ -40,11 +39,10 @@ int main() {
         printf("c) Área de un círculo\n");
         printf("d) Salir\n");
         printf("Opción: ");
-        opcion = getchar();
-        getchar(); // Para capturar el salto de línea
+        scanf("%d", &opcion);
 
         switch(opcion) {
-            case 'a':
+            case 1:
                 // Pedir base y altura para el rectángulo
                 printf("Introduce la base del rectángulo: ");
                 scanf("%f", &base);
@@ -53,7 +51,7 @@ int main() {
                 area = base * altura;
                 printf("El área del rectángulo es: %.2f\n", area);
                 break;
-            case 'b':
+            case 2:
                 // Pedir base y altura para el triángulo
                 printf("Introduce la base del triángulo: ");
                 scanf("%f", &base);
@@ -62,24 +60,19 @@ int main() {
                 area = (base * altura) / 2;
                 printf("El área del triángulo es: %.2f\n", area);
                 break;
-            case 'c':
+            case 3:
                 // Pedir radio para el círculo
                 printf("Introduce el radio del círculo: ");
                 scanf("%f", &radio);
                 area = M_PI * radio * radio;
                 printf("El área del círculo es: %.2f\n", area);
                 break;
-            case 'd':
+            case 4:
                 printf("Saliendo del programa...\n");
                 break;
             default:
                 printf("Opción no válida. Por favor, seleccione una opción válida.\n");
-        }
-
-        // Limpiar el buffer de entrada
-        while (getchar() != '\n');
-
-    } while(opcion != 'd');
+  
 
     return 0;
 }
