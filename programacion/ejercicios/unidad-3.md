@@ -961,3 +961,508 @@ int main() {
 // Some code
 ```
 
+***
+
+### Actividad 29 P39
+
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// Función para calcular la edad
+int calcularEdad(const char* diaNac, const char* mesNac, const char* anoNac) {
+    // Obtener la fecha actual
+    time_t t = time(NULL);
+    struct tm tmActual = *localtime(&t);
+    
+    // Convertir el día, mes y año de nacimiento a enteros
+    int dia = atoi(diaNac);
+    int mes = atoi(mesNac);
+    int ano = atoi(anoNac);
+    
+    // Calcular la edad
+    int edad = tmActual.tm_year + 1900 - ano;  // Año actual - año de nacimiento
+    if (mes > tmActual.tm_mon + 1 || (mes == tmActual.tm_mon + 1 && dia > tmActual.tm_mday)) {
+        // Si no ha llegado aún el cumpleaños este año, restamos 1
+        edad--;
+    }
+
+    return edad;
+}
+
+int main() {
+    // Variables para almacenar el día, mes y año de nacimiento
+    char diaNac[3], mesNac[3], anoNac[5];
+
+    // Solicitar al usuario los datos
+    printf("Introduce tu fecha de nacimiento (día mes año): ");
+    scanf("%s %s %s", diaNac, mesNac, anoNac);
+
+    // Llamar a la función y mostrar la edad
+    int edad = calcularEdad(diaNac, mesNac, anoNac);
+    printf("Tu edad es: %d años\n", edad);
+
+    return 0;
+}
+```
+
+### Actividad 30 P40
+
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int mayorDeTres(int num1, int num2, int num3) {
+    int mayor = num1;
+
+    if (num2 > mayor) {
+        mayor = num2;
+    }
+    if (num3 > mayor) {
+        mayor = num3;
+    }
+
+    return mayor;  // Retorna el mayor de los tres
+}
+
+int main() {
+    int num1, num2, num3;
+    printf("Introduce tres numeros: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    int mayor = mayorDeTres(num1, num2, num3);
+    printf("El mayor de los tres numeros es: %d\n", mayor);
+
+    return 0;
+}
+
+```
+
+### Actividad 31 P40
+
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+#include <math.h>  // Para usar la constante M_PI y la función pow()
+
+// Función para realizar las operaciones sobre el cilindro
+double operarCilindro(char operacion, double altura, double radio) {
+    const double PI = M_PI;  // Definir PI usando la constante M_PI
+
+    if (operacion == 'a') {
+        return 2 * PI * radio * altura;
+    } else if (operacion == 'v') {
+        return PI * pow(radio, 2) * altura;
+    } else {
+        // Si la operación no es válida, retornamos -1 para indicar error
+        return -1;
+    }
+}
+
+int main() {
+    int opcion;
+    double altura, radio, resultado;
+    char operacion;
+
+    do {
+
+        printf("\nMenu de operaciones con cilindro:\n");
+        printf("1. Calcular Area lateral (A)\n");
+        printf("2. Calcular Volumen (V)\n");
+        printf("Seleccione una opción (1 o 2): ");
+        scanf("%d", &opcion);
+
+        if (opcion == 1) {
+            operacion = 'a';
+        } else if (opcion == 2) {
+            operacion = 'v';  
+        } else {
+            printf("Opción no válida. Por favor elija 1 o 2.\n");
+            continue;
+        }
+
+
+        printf("Introduce la altura del cilindro: ");
+        scanf("%lf", &altura);
+        printf("Introduce el radio de la base del cilindro: ");
+        scanf("%lf", &radio);
+
+        resultado = operarCilindro(operacion, altura, radio);
+
+        if (resultado == -1) {
+            printf("Operación no válida.\n");
+        } else {
+            // Mostrar el resultado dependiendo de la operación seleccionada
+            if (operacion == 'a') {
+                printf("El área lateral del cilindro es: %.2f\n", resultado);
+            } else if (operacion == 'v') {
+                printf("El volumen del cilindro es: %.2f\n", resultado);
+            }
+        }
+
+        // Preguntar si el usuario desea realizar otra operación
+        printf("\n¿Deseas realizar otra operación? (s/n): ");
+        char respuesta;
+        scanf(" %c", &respuesta); 
+
+        if (respuesta != 's' && respuesta != 'S') {
+            break;  
+        }
+
+    } while (1);
+
+    printf("Programa finalizado.\n");
+
+    return 0;
+}
+```
+
+### Actividad 32 P41
+
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+// Función para mostrar el menú y obtener la opción seleccionada
+int mostrarMenu() {
+    int opcion;
+
+    // Mostrar el menú
+    printf("\nMenu de operaciones:\n");
+    printf("1. Sumar\n");
+    printf("2. Restar\n");
+    printf("3. Multiplicar\n");
+    printf("4. Dividir\n");
+    printf("Seleccione una opcion (1-4): ");
+    scanf("%d", &opcion);
+
+    // Validación de opción seleccionada
+    while (opcion < 1 || opcion > 4) {
+        printf("Opcion no valida. Por favor elija una opcion entre 1 y 4: ");
+        scanf("%d", &opcion);
+    }
+
+    return opcion;  // Devolver la opción seleccionada
+}
+
+int main() {
+    int opcion;
+    double num1, num2, resultado;
+
+    // Llamar a la función para mostrar el menú y obtener la opción
+    opcion = mostrarMenu();
+
+    // Pedir los dos números para realizar la operación
+    printf("Introduce el primer numero: ");
+    scanf("%lf", &num1);
+    printf("Introduce el segundo numero: ");
+    scanf("%lf", &num2);
+
+    // Realizar la operación según la opción seleccionada
+    switch(opcion) {
+        case 1: // Sumar
+            resultado = num1 + num2;
+            printf("El resultado de %.2f + %.2f es: %.2f\n", num1, num2, resultado);
+            break;
+        case 2: // Restar
+            resultado = num1 - num2;
+            printf("El resultado de %.2f - %.2f es: %.2f\n", num1, num2, resultado);
+            break;
+        case 3: // Multiplicar
+            resultado = num1 * num2;
+            printf("El resultado de %.2f * %.2f es: %.2f\n", num1, num2, resultado);
+            break;
+        case 4: // Dividir
+            if (num2 != 0) {  // Validación para evitar la división por cero
+                resultado = num1 / num2;
+                printf("El resultado de %.2f / %.2f es: %.2f\n", num1, num2, resultado);
+            } else {
+                printf("Error: No se puede dividir por cero.\n");
+            }
+            break;
+        default:
+            printf("Opcion no valida.\n");
+    }
+
+    return 0;
+}
+
+```
+
+### Actividad 33 P41
+
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+// Función que verifica si un número es primo
+int esPrimo(int num) {
+    if (num <= 1) return 0; // Los números menores o iguales a 1 no son primos
+    if (num == 2) return 1; // El 2 es primo
+    if (num % 2 == 0) return 0; // Los números pares mayores que 2 no son primos
+    
+    // Comprobar divisores desde 3 hasta la raíz cuadrada de num
+    for (int i = 3; i <= sqrt(num); i += 2) {
+        if (num % i == 0) return 0; // Si num es divisible por i, no es primo
+    }
+    return 1; // Si no se encontró ningún divisor, es primo
+}
+
+// Función que cuenta los divisores primos de un número
+int contarDivisoresPrimos(int num) {
+    int count = 0;
+    
+    // Comprobar los divisores primos
+    for (int i = 2; i <= num; i++) {
+        // Si i es un divisor de num y es primo
+        if (num % i == 0 && esPrimo(i)) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+int main() {
+    int num;
+
+    // Solicitar un número al usuario
+    printf("Introduce un número: ");
+    scanf("%d", &num);
+
+    // Contar los divisores primos del número
+    int divisoresPrimos = contarDivisoresPrimos(num);
+    
+    // Mostrar el resultado
+    printf("El número %d tiene %d divisores primos.\n", num, divisoresPrimos);
+
+    return 0;
+}
+
+```
+
+### Actividad 34 P41
+
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+double calcularDescuento(int cantidad, double totalPagado, double valorUnidad) {
+	
+    double precioOriginal = cantidad * valorUnidad;
+    
+    double descuento = precioOriginal - totalPagado;
+    
+    double porcentajeDescuento = (descuento / precioOriginal) * 100;
+    
+    return porcentajeDescuento;
+}
+
+int main() {
+    int cantidad;
+    double totalPagado, valorUnidad, porcentajeDescuento;
+
+    
+    printf("Introduce la cantidad de artículos comprados: ");
+    scanf("%d", &cantidad);
+    printf("Introduce el total pagado: ");
+    scanf("%lf", &totalPagado);
+    printf("Introduce el valor de la unidad: ");
+    scanf("%lf", &valorUnidad);
+
+
+    porcentajeDescuento = calcularDescuento(cantidad, totalPagado, valorUnidad);
+    
+    printf("El porcentaje de descuento aplicado es: %.2f%%\n", porcentajeDescuento);
+
+    return 0;
+}
+```
+
+### Actividad 35 P42
+
+<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+// Función que convierte centímetros a pulgadas
+double convertirACentimetros(double centimetros) {
+    return centimetros / 2.54;  // Realiza la conversión
+}
+
+int main() {
+    double centimetros, pulgadas;
+
+    // Solicitar al usuario la cantidad en centímetros
+    printf("Introduce la cantidad en centímetros: ");
+    scanf("%lf", &centimetros);
+
+    // Llamar a la función para convertir a pulgadas
+    pulgadas = convertirACentimetros(centimetros);
+
+    // Mostrar el resultado
+    printf("%.2f centímetros son equivalentes a %.2f pulgadas.\n", centimetros, pulgadas);
+
+    return 0;
+}
+
+```
+
+### Actividad 36 P42
+
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int sumaDeDigitos(int num) {
+    int suma = 0;
+
+    if (num < 1 || num > 1000) {
+        printf("El número debe estar entre 1 y 1000.\n");
+        return -1;  // Error si el número no está en el rango
+    }
+    while (num > 0) {
+        suma += num % 10;  // Añadir el último dígito a la suma
+        num /= 10;  // Eliminar el último dígito del número
+    }
+
+    return suma;  // Retornar la suma de los dígitos
+}
+
+int main() {
+    int num;
+    printf("Introduce un número entre 1 y 1000: ");
+    scanf("%d", &num);
+
+    int resultado = sumaDeDigitos(num);
+
+    if (resultado != -1) {
+        printf("La suma de los dígitos de %d es: %d\n", num, resultado);
+    }
+
+    return 0;
+}
+
+
+```
+
+### Actividad 37 P42
+
+<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+// Función que devuelve 1 si el año es bisiesto, 0 si no lo es
+int esBisiesto(int anyo) {
+    if ((anyo % 4 == 0 && anyo % 100 != 0) || (anyo % 400 == 0)) {
+        return 1;  // Año bisiesto
+    }
+    return 0;  // Año no bisiesto
+}
+
+int main() {
+    int anyo;
+    printf("Introduce un anyo: ");
+    scanf("%d", &anyo);
+    
+	if (esBisiesto(anyo)) {
+        printf("El anyo %d es bisiesto.\n", anyo);
+    } else {
+        printf("El anyo %d no es bisiesto.\n", anyo);
+    }
+
+    return 0;
+}
+```
+
+### Actividad 38 P48
+
+<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int factorial(int n);
+
+int main() {
+    int num;
+    printf("Introduce un numero para calcular su factorial: ");
+    scanf("%d", &num);
+    int result = factorial(num);
+    printf("El factorial de %d es %d\n", num, result);
+    
+	return 0;
+}
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+```
+
+### Actividad 39 P48
+
+<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+// Función recursiva para calcular a^b
+int potencia(int a, int b) {
+    // Caso base: cualquier número elevado a 0 es 1
+    if (b == 0) {
+        return 1;
+    }
+    // Llamada recursiva: a^b = a * a^(b-1)
+    return a * potencia(a, b - 1);
+}
+
+int main() {
+    int base, exponente, resultado;
+
+    // Solicitar al usuario la base y el exponente
+    printf("Introduce la base: ");
+    scanf("%d", &base);
+    printf("Introduce el exponente: ");
+    scanf("%d", &exponente);
+
+    // Llamar a la función potencia para calcular el resultado
+    resultado = potencia(base, exponente);
+
+    // Mostrar el resultado
+    printf("%d elevado a %d es: %d\n", base, exponente, resultado);
+
+    return 0;
+}
+
+```
+
+### Actividad 40 P48
+
+<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+
+```
+// Some code
+```
+
+### Actividad 42 P49
+
+<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+
+```
+// Some code
+```
+
