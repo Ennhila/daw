@@ -9,6 +9,7 @@
   * [Unidad 1](programacion/ejercicios/unidad-1.md)
   * [Unidad 2](programacion/ejercicios/unidad-2.md)
   * [Unidad 3](programacion/ejercicios/unidad-3.md)
+  * [Unidad 4](programacion/ejercicios/unidad-4.md)
 * [Exámenes](programacion/examenes.md)
 
 ## Lenguaje de Marcas
