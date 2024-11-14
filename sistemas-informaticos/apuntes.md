@@ -16,3 +16,11 @@ layout:
 
 ***
 
+### UNIDAD 1
+
+{% file src="../.gitbook/assets/Manual Word.pdf" %}
+
+### UNIDAD 2
+
+{% file src="../.gitbook/assets/Explotación de Sistemas microinformáticos.pdf" %}
+

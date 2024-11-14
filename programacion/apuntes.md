@@ -16,7 +16,7 @@ layout:
 
 ***
 
-#### UT.1 - Conceptos Básicos de Programación: <a href="#sectionid-8128-title" id="sectionid-8128-title"></a>
+### UT.1 - Conceptos Básicos de Programación: <a href="#sectionid-8128-title" id="sectionid-8128-title"></a>
 
 {% file src="../.gitbook/assets/Unidad1.pdf" %}
 
@@ -27,3 +27,7 @@ layout:
 ### UT.3 - Estructuras de Control <a href="#sectionid-8130-title" id="sectionid-8130-title"></a>
 
 {% file src="../.gitbook/assets/Unidad3.pdf" %}
+
+### UT.4 - Estructuras de Almacenamiento
+
+{% file src="../.gitbook/assets/Unidad4 (1).pdf" %}
