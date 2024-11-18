@@ -15,7 +15,9 @@
 ## Lenguaje de Marcas
 
 * [Apuntes](lenguaje-de-marcas/apuntes.md)
-* [Ejercicios](lenguaje-de-marcas/ejercicios.md)
+* [Ejercicios](lenguaje-de-marcas/ejercicios/README.md)
+  * [Unidad 2](lenguaje-de-marcas/ejercicios/unidad-2.md)
+  * [Unidad 3](lenguaje-de-marcas/ejercicios/unidad-3.md)
 * [Exámenes](lenguaje-de-marcas/examenes.md)
 
 ## Bases de Datos

@@ -12,15 +12,15 @@ layout:
     visible: true
 ---
 
-# Ejercicios
+# Unidad 2
 
 ***
 
 ### Actividad 10 P50 U2
 
-<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 {% code fullWidth="true" %}
 ```html
@@ -107,7 +107,7 @@ layout:
 
 ### Actividad 12 P62 U2
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 {% code fullWidth="true" %}
 ```html
@@ -188,7 +188,7 @@ layout:
 
 ### Actividad 13 P73 U2
 
-<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 {% code fullWidth="true" %}
 ```html
