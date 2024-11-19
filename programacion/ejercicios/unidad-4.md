@@ -18,7 +18,7 @@ layout:
 
 ### Actividad 1 P20
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -83,7 +83,7 @@ int main(){
 
 ### Actividad 2 P21
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -135,3 +135,39 @@ int main(){
         printf("\nTemperatura maxima total = %.2f", maxTotal);
 }
 ```
+
+### Actividad 3 P22
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+
+int main(){
+	
+	int n;
+	
+	printf("Introduce el tomanyo del array: ");
+	scanf("%d", &n);
+	
+	int array[n];
+	
+	printf("Introduce %d numeros enteros:\n");
+	for(int i = 0; i <n ; i++){
+		printf("Elemento %d: ", i + 1);
+		scanf("%d", &array[i]);
+	}
+	printf("\n");
+	
+	printf("Array en orden inverso:\n");
+    for (int i = n - 1; i >= 0; i--) {
+        printf("%d ", array[i]);
+	}
+    printf("\n");
+		
+}
+```
+
+### Actividad 4 P22
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
