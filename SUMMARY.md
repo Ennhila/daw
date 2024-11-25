@@ -26,6 +26,7 @@
 * [Ejercicios](bases-de-datos/ejercicios/README.md)
   * [Unidad 1](bases-de-datos/ejercicios/unidad-1.md)
   * [Unidad 2](bases-de-datos/ejercicios/unidad-2.md)
+  * [Unidad 3](bases-de-datos/ejercicios/unidad-3.md)
 * [Exámenes](bases-de-datos/examenes.md)
 
 ## Sistemas Informáticos
