@@ -18,7 +18,7 @@ layout:
 
 ### Actividad 1 P20
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -83,7 +83,7 @@ int main(){
 
 ### Actividad 2 P21
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -138,7 +138,7 @@ int main(){
 
 ### Actividad 3 P22
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 #include <stdio.h>
@@ -170,4 +170,77 @@ int main(){
 
 ### Actividad 4 P22
 
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+### Actividad 5 P22
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+```c
+#include <stdio.h>
+#define MAX 100
+
+int main(){
+	int dim, fila, columna, k;
+	int m1[MAX][MAX], m2[MAX][MAX], r[MAX][MAX];
+	
+	do{
+		printf("Introduce la dimension: ");
+		scanf("%d", &dim);
+	}while(dim <= 0 || dim >= 100);
+	
+	//Matriz 1
+	for( fila = 0; fila <dim ; fila++){
+		for(columna = 0; columna <dim; columna++){
+			printf("Introduce m1[%d][%d]: ", fila, columna);
+			scanf("%d", &m1[fila][columna]);
+		}
+	}
+	printf("\n");
+	
+	//Matriz 2
+	for( fila = 0; fila <dim ; fila++){
+		for(columna = 0; columna <dim; columna++){
+			printf("Introduce m2[%d][%d]: ", fila, columna);
+			scanf("%d", &m2[fila][columna]);
+		}
+	}
+	
+	for( fila = 0; fila <dim ; fila++){
+		for(columna = 0; columna <dim; columna++){
+			r[fila][columna] = 0;
+		}
+	}
+	//Producto de matrices
+	for( fila = 0; fila <dim ; fila++){
+		for(columna = 0; columna <dim; columna++){
+			r[fila][columna] = 0;
+			for(k = 0 ; k < dim ; k++){
+				r[fila][columna] = r[fila][columna] + (m1[fila][k] * m2[k][columna]);
+			}
+		}
+		
+	}
+	//Mostrar en la pantalla
+	for( fila = 0; fila <dim ; fila++){
+		for(columna = 0; columna <dim; columna++){
+			printf("%d ", m1[fila][columna]);
+		}
+		printf("\t");
+		for(columna = 0; columna <dim; columna++){
+			printf("%d ", m2[fila][columna]);
+		}
+		printf("\t");
+		for(columna = 0; columna <dim; columna++){
+			printf("%d ", r[fila][columna]);
+		}
+		printf("\n");
+	}
+	
+}
+```
+
+### Actividad 5 P23
+
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
