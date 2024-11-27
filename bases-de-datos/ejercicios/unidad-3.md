@@ -148,15 +148,131 @@ califica( **participante** , **fase**)
 
 ***
 
-### Acitividad 12 P48
+### Acitividad 14 P49
 
-ReciboComunidad(**numero**, fecha, importe, NCatasral)
+Alumno (  **DNI** , nombre, fechaNac, nivel, letra)
 
-ReciboCompañia((**numero**, fecha, importe, NContrato, CIF)
+tutor(**email**, nombre, telefono)
 
-Cuenta(**sucursal**, **control**, **numero**, saldo)
+materia(**nombre**)
 
+clase(**Nivel**, **letra**, tutor)
 
+Profesor(**DNI**, nombre, titulacion)
 
+hermano(**alumno1** , **alumno2**)
 
+Responsable(**tutor**, **alumno**, relacion)
+
+imparte(**profesor**, **nivel, letra**, **materia**)
+
+cursa(**Materia**, **Alumno,** nota)
+
+***
+
+### Actividad 15 P51
+
+Galeria(**nombre**, direccion, poblacion, provincina)
+
+Obra( **codigo**, titulo, epoca, año, tipo, galeria, autor)
+
+autor(**nombre**, pais,fechD, fechaN)
+
+Mecenas(**codigo**, ciudad, pais, nombre)
+
+Patrocina(**autor**, **mecenas**, fechF,fechaI)
+
+Maestro(**autor1**, **autor2**)
+
+***
+
+### Actividad 17 P52
+
+Alumno(**codigo**, nombre, NIF, telef)
+
+Empleado(**codigo**, nombre, NIF, NSS)
+
+Edicion (**ID**, fechaIN, fechaFIN, horario, lugar)
+
+Cursa(**Alumno**, **empleado**, **edicion**)
+
+Curso(codigo, nombre, descripcion, objetivos)
+
+prerrequisto ( **curso1**, **curso2**, obligatorio)
+
+Unidad( **nombre**, contenido,)
+
+***
+
+### Actividad 18 P54
+
+Perfil ( **email**, foto, seco, edad, trabajo, descripcion, religion,formacion)
+
+Aficion(**codigo**, descripcion)
+
+practica (**perfil**, **aficion**, frecuencia)
+
+interesa(**Perfil**, **usuario**, like)
+
+Usuario( **NIF**, telefono, usuario, pass)
+
+cita(**ID**, fecha, lugar)
+
+Encuesta(**Numero**, respuestas)
+
+***
+
+### Actividad 19 P55
+
+Articulo(**codigo**, imagen, precio, familia, año, estacion, oferta)
+
+oferta(**tipo**, **cantidad**)
+
+stock(**codigo**, color, talla, cantidad, articulo)
+
+LineaTicket(**numero**, color, talla, cantidad, coste, ticket, Articulo)
+
+Ticket(**codigo**, formaPago, fecha, vendedor)
+
+vendedor(**NSS**, nombre, sueldo)
+
+LineaFactura(**numero**, color, cantidad, talla, coste, factura, Articulo)
+
+factura(**numero**, fecha, IVA)
+
+Representante(**ID**, nombre, telefono, email, Empresa)
+
+Empresa(**CIF**, firmaComercial)
+
+***
+
+### Actividad 20 P56
+
+trabajador( **DNI**, nombre, telefono, sueldo, ocupacion, NSS)
+
+Afiliado(**DNI**, nombre, telefono, numero, Email, sede, cargo)
+
+cuenta(**numero**, saldo, IBA,)
+
+titular(**Afiliado**, **cuenta**)
+
+Movimiento( **numero**, tipo, cantidad, concepto, cuenta)
+
+financiacion( **codigo**, tipo, cantidad, cuenta afiliado, trabajador)
+
+***
+
+### Actividad 21 P57
+
+Trabajador( **codigo**, nombre, puesto, especialidad, NIF)
+
+cliente( **codigo**, nombre)
+
+Mascota(**NChip** , raza, color, edad)
+
+progenitor(
+
+servicio( **codigo**, precio, tipo)
+
+atiende ( **Mascota**, **servicio**, **trabajador**, fecha, descripcion)
 
