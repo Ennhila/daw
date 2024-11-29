@@ -196,17 +196,23 @@ Edicion (**ID**, fechaIN, fechaFIN, horario, lugar)
 
 Cursa(**Alumno**, **empleado**, **edicion**)
 
-Curso(codigo, nombre, descripcion, objetivos)
+Curso(**codigo**, nombre, descripcion)
+
+objetivos( **curso**, objetivos)
 
 prerrequisto ( **curso1**, **curso2**, obligatorio)
 
-Unidad( **nombre**, contenido,)
+Unidad( **nombre**)
+
+contenido(**Unidad**, contenido)
 
 ***
 
 ### Actividad 18 P54
 
-Perfil ( **email**, foto, seco, edad, trabajo, descripcion, religion,formacion)
+Perfil ( **email**, foto, seco, edad, trabajo, descripcion, religion)
+
+formacion(**Perfil**, **formacion**)
 
 Aficion(**codigo**, descripcion)
 
@@ -218,7 +224,11 @@ Usuario( **NIF**, telefono, usuario, pass)
 
 cita(**ID**, fecha, lugar)
 
-Encuesta(**Numero**, respuestas)
+Encuesta(**Numero**)
+
+respuestas(**Encuesta**, respuestas)
+
+tiene(**cita**, **usuario**, **encuesta**)
 
 ***
 
@@ -230,15 +240,15 @@ oferta(**tipo**, **cantidad**)
 
 stock(**codigo**, color, talla, cantidad, articulo)
 
-LineaTicket(**numero**, color, talla, cantidad, coste, ticket, Articulo)
+LineaTicket(**numero**,**ticket**, color, talla, cantidad, coste, ticket, Articulo)
 
 Ticket(**codigo**, formaPago, fecha, vendedor)
 
 vendedor(**NSS**, nombre, sueldo)
 
-LineaFactura(**numero**, color, cantidad, talla, coste, factura, Articulo)
+LineaFactura(**numero**, **factura**, color, cantidad, talla, coste, factura)
 
-factura(**numero**, fecha, IVA)
+factura(**numero**, fecha, IVA, Representante)
 
 Representante(**ID**, nombre, telefono, email, Empresa)
 
@@ -256,9 +266,11 @@ cuenta(**numero**, saldo, IBA,)
 
 titular(**Afiliado**, **cuenta**)
 
-Movimiento( **numero**, tipo, cantidad, concepto, cuenta)
+Movimiento( **numero**, **cuenta**, tipo, cantidad, concepto, cuenta)
 
-financiacion( **codigo**, tipo, cantidad, cuenta afiliado, trabajador)
+financiacion( **codigo**, tipo, cantidad, cuenta, trabajador)
+
+sede(**numero**, tel, direccion,, cargo)
 
 ***
 
@@ -270,9 +282,8 @@ cliente( **codigo**, nombre)
 
 Mascota(**NChip** , raza, color, edad)
 
-progenitor(
-
 servicio( **codigo**, precio, tipo)
 
 atiende ( **Mascota**, **servicio**, **trabajador**, fecha, descripcion)
 
+***
